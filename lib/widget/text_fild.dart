@@ -9,7 +9,7 @@ Widget textFild({
   required String image,
   required TextEditingController controller,
   bool isObs = false,
-  TextInputType? keyBordType,
+  TextInputType? keyBordType, required Key key,
 }) {
   return Container(
     height: 70.0,

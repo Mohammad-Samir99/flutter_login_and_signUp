@@ -36,17 +36,22 @@ class _LoginPageState extends State<LoginPage> {
                 style: headline3,
               ),
               SpaceVH(height: 60.0),
-              textFild(
-                controller: userName,
-                image: 'user.svg',
-                hintTxt: 'Username',
-              ),
-              textFild(
-                controller: userPass,
-                image: 'hide.svg',
-                isObs: true,
-                hintTxt: 'Password',
-              ),
+           TextField(
+            controller: userName,
+             decoration: InputDecoration(
+             border: OutlineInputBorder(),
+icon: Icon(Icons.person_add_alt_1_outlined),
+              hintText: 'Enter a user name',
+  ),
+),
+           TextField(
+            controller: userPass,
+            decoration: InputDecoration(
+              icon: Icon(Icons.password),
+            border: OutlineInputBorder(),
+            hintText: 'Enter a pass',
+  ),
+),
               SpaceVH(height: 10.0),
               Align(
                 alignment: Alignment.centerRight,

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:uidisign05/constants_keys/const_keys.dart';
 import 'package:uidisign05/core/colors.dart';
 import 'package:uidisign05/core/space.dart';
 import 'package:uidisign05/core/text_style.dart';
@@ -38,24 +39,29 @@ class _SignUpPageState extends State<SignUpPage> {
               ),
               SpaceVH(height: 60.0),
               textFild(
+                key: ConstKey.Name,
                 controller: userName,
                 image: 'user.svg',
                 keyBordType: TextInputType.name,
                 hintTxt: 'Full Name',
               ),
               textFild(
+                key: ConstKey.Email,
                 controller: userEmail,
                 keyBordType: TextInputType.emailAddress,
                 image: 'user.svg',
                 hintTxt: 'Email Address',
               ),
               textFild(
+                key: ConstKey.Phone,
                 controller: userPh,
                 image: 'user.svg',
                 keyBordType: TextInputType.phone,
                 hintTxt: 'Phone Number',
+                
               ),
               textFild(
+                key: ConstKey.Password,
                 controller: userPass,
                 isObs: true,
                 image: 'hide.svg',
@@ -65,7 +71,8 @@ class _SignUpPageState extends State<SignUpPage> {
               Mainbutton(
                 onTap: () {},
                 text: 'Sign Up',
-                btnColor: blueButton,
+                 key: ConstKey.SignUp, btnColor: null,
+          
               ),
               SpaceVH(height: 20.0),
               TextButton(
